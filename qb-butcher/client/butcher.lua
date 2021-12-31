@@ -11,14 +11,8 @@ local Keys = {
   }
 
 
-QBCore = nil
+QBCore = exports['qb-core']:GetCoreObject()
 
-CreateThread(function()
-    while QBCore == nil do
-        TriggerEvent('QBCore:GetObject', function(obj) QBCore= obj end)
-        Wait(200)
-    end
-end)
 
 ------------------CONFIG----------------------
 local startX = 2388.37  --starting
